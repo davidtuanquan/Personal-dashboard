@@ -27,12 +27,12 @@ export function SellingView() {
       <SellingStats listings={listings} />
       <Card>
         <ListingForm onAdd={addListing} />
-        <div className="mt-4 flex flex-wrap gap-2 border-b border-border-soft pb-4">
+        <div className="mt-4 flex flex-nowrap gap-1 overflow-x-auto border-b border-border-soft pb-4">
           {FILTERS.map((f) => (
             <button
               key={f.id}
               onClick={() => setFilter(f.id)}
-              className={`rounded-control px-3 py-1 text-sm font-medium ${
+              className={`shrink-0 rounded-control px-2 py-1 text-xs font-medium ${
                 filter === f.id ? 'bg-selling-bg text-selling' : 'text-ink-muted hover:text-ink'
               }`}
             >
