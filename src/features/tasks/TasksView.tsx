@@ -25,7 +25,7 @@ export function TasksView() {
       <SectionHeading title="Tasks" subtitle="Everything on your plate, in one list." />
       <Card>
         <AddTaskForm onAdd={addTask} />
-        <div className="mt-4 flex gap-2 border-b border-border-soft pb-4">
+        <div className="mt-4 flex flex-wrap gap-2 border-b border-border-soft pb-4">
           {FILTERS.map((f) => (
             <button
               key={f.id}

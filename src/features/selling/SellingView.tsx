@@ -27,7 +27,7 @@ export function SellingView() {
       <SellingStats listings={listings} />
       <Card>
         <ListingForm onAdd={addListing} />
-        <div className="mt-4 flex gap-2 border-b border-border-soft pb-4">
+        <div className="mt-4 flex flex-wrap gap-2 border-b border-border-soft pb-4">
           {FILTERS.map((f) => (
             <button
               key={f.id}
